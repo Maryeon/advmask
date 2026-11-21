@@ -1,0 +1,28 @@
+[project]
+name = "advmask"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyter>=1.1.1",
+    "lab>=8.11",
+    "matplotlib>=3.11.2",
+    "notebook>=7.6.5",
+    "opencv-python>=5.0.0.93",
+    "scikit-image>=0.26.0",
+    "torch>=2.11.0",
+    "torchmetrics>=1.9.0",
+    "torchvision>=0.26.0",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu128" },
+]
+torchvision = [
+    { index = "pytorch-cu128" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
